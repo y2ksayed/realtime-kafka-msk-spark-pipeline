@@ -1,0 +1,13 @@
+# Prometheus scrape config for the Spark streaming job.
+# Spark exposes metrics at <driver-host>:4040/metrics/prometheus
+# (configured in spark_streaming.py via the PrometheusServlet sink).
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "spark-streaming"
+    static_configs:
+      - targets: ["localhost:4040"]
+        labels:
+          app: "clickstream-streaming"

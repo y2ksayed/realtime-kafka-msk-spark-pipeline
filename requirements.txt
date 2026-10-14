@@ -1,0 +1,13 @@
+# Core streaming deps
+pyspark==3.5.1
+kafka-python==2.0.2
+
+# Delta Lake (optional but recommended for the silver table)
+delta-spark==3.1.0
+
+# AWS (S3 access from Spark uses hadoop-aws, but boto3 is handy for scripts)
+boto3==1.34.0
+
+# Utilities
+python-dotenv==1.0.1
+pyyaml==6.0.1
